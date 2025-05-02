@@ -4,10 +4,10 @@
 #The Movie Guide Program
 def movie_guide():
     print("\nThe Movie List Program\n")
-    print("\nCOMMAND MENU")
-    print("\list - Lists all movies")
-    print("\add - Add a movie")
-    print("\del - Delete a movie")
+    print("COMMAND MENU")
+    print("list - Lists all movies")
+    print("add - Add a movie")
+    print("del - Delete a movie")
     print("exit - Exit program\n")
 
 
@@ -15,7 +15,7 @@ def list_movies(movies):
     if not movies:
         print("No movies in the list.")
     else:
-        for i, movie in enurerate(movies, start=1):
+        for i, movie in enumerate(movies, start=1):
             print(f"{i}. {movie}")
     print()
 #To add or remove we use move_list.append/pop('element')
@@ -49,10 +49,10 @@ def main():
         command = input("Command: ").lower()
         if command == "list":
             list_movies(movies)
-        elif command == "and":
+        elif command == "add":
             add_movie(movies)
         elif command == "del":
-            deliver_movie(movies)
+            del_movie(movies)
         elif command == "exit":
             print("Bye!")
             break
